@@ -2,6 +2,8 @@ package tools;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
@@ -16,6 +18,13 @@ public class Dom4jXML {
 		int returnValue = 0;
 
 		Document document = DocumentHelper.createDocument();
+
+		// ProcessingInstruction
+		Map<String, String> cssMap = new HashMap<String, String>();
+		cssMap.put("type", "text/css");
+		cssMap.put("href", "students.css");
+		document.addProcessingInstruction("xml-stylesheet", cssMap);
+
 		document.addComment("订单详细内容");
 
 		Element root = document.addElement("OrderData");
@@ -157,6 +166,6 @@ public class Dom4jXML {
 	}
 
 	public static void main(String[] args) {
-		// Dom4jXML.createXMLFile("g://holen.xml");
+		Dom4jXML.createXMLFile("g://holen.xml");
 	}
 }
