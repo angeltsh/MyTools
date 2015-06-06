@@ -34,43 +34,81 @@ public class Dom4jXML {
 
 		root.addComment("左手拇指");
 		Element imgL1 = root.addElement("imgL1");
-		imgL1.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgL1.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
+		imgL1.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "2");
+		imgL1.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "3");
 
 		root.addComment("左手食指");
 		Element imgL2 = root.addElement("imgL2");
-		imgL2.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgL2.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
 
 		root.addComment("左手中指");
 		Element imgL3 = root.addElement("imgL3");
-		imgL3.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgL3.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
 
 		root.addComment("左手无名指");
 		Element imgL4 = root.addElement("imgL4");
-		imgL4.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgL4.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
 
 		root.addComment("左手小指");
 		Element imgL5 = root.addElement("imgL5");
-		imgL5.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgL5.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
 
 		root.addComment("右手拇指");
 		Element imgR1 = root.addElement("imgR1");
-		imgR1.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgR1.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
 
 		root.addComment("右手食指");
 		Element imgR2 = root.addElement("imgR2");
-		imgR2.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgR2.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
 
 		root.addComment("右手中指");
 		Element imgR3 = root.addElement("imgR3");
-		imgR3.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgR3.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
 
 		root.addComment("右手无名指");
 		Element imgR4 = root.addElement("imgR4");
-		imgR4.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgR4.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
 
 		root.addComment("右手小指");
 		Element imgR5 = root.addElement("imgR5");
-		imgR5.setText("http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg");
+		imgR5.addElement("img")
+				.addAttribute("value",
+						"http://192.168.1.136:8080/3dmeijia/images/app-nails/test.jpg")
+				.addAttribute("div", "1");
 
 		try {
 			/** 将document中的内容写入文件中 */
@@ -119,6 +157,6 @@ public class Dom4jXML {
 	}
 
 	public static void main(String[] args) {
-		Dom4jXML.createXMLFile("g://holen.xml");
+		// Dom4jXML.createXMLFile("g://holen.xml");
 	}
 }
