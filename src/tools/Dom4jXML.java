@@ -22,7 +22,7 @@ public class Dom4jXML {
 		// ProcessingInstruction
 		Map<String, String> cssMap = new HashMap<String, String>();
 		cssMap.put("type", "text/css");
-		cssMap.put("href", "students.css");
+		cssMap.put("href", "/css/orderdata.css");
 		document.addProcessingInstruction("xml-stylesheet", cssMap);
 
 		document.addComment("订单详细内容");
