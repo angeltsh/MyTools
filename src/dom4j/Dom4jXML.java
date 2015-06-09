@@ -1,4 +1,4 @@
-package tools;
+package dom4j;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -12,6 +12,10 @@ import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
+/**
+ * Dom4j生成XML
+ * @author Serana
+ */
 public class Dom4jXML {
 
 	public static int createXMLFile(String filename) {
@@ -27,8 +31,8 @@ public class Dom4jXML {
 
 		document.addComment("订单详细内容");
 
-		Element root = document.addElement("OrderData");
-		root.addAttribute("id", "keyId");
+		Element root = document.addElement("OrderData");// 添加子元素
+		root.addAttribute("id", "keyId");// 添加属性
 
 		// 订单编号
 		root.addComment("订单编号");
