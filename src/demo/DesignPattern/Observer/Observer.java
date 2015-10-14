@@ -12,7 +12,7 @@ public interface Observer {
 	 * @param humidity
 	 *            湿度
 	 * @param pressure
-	 *            大气压
+	 *            气压
 	 */
 	void update(float temp, float humidity, float pressure);
 }
