@@ -6,13 +6,13 @@ import java.util.List;
 /**
  * 天气信息传感器
  */
-public class WeatherData implements Subject {
+public class SubjectWeatherData implements Subject {
 	private List<Observer> observers;
 	private float temperature;
 	private float humidity;
 	private float pressure;
 
-	public WeatherData() {
+	public SubjectWeatherData() {
 		this.observers = new ArrayList<Observer>();
 	}
 
