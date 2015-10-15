@@ -8,6 +8,7 @@ public class DisplayForecast implements Observer, DisplayElement {
 	public float temperature;
 	public float humidity;
 	public Subject weatherData;
+	public String message;
 
 	public DisplayForecast(Subject weatherData) {
 		this.weatherData = weatherData;
@@ -16,7 +17,7 @@ public class DisplayForecast implements Observer, DisplayElement {
 
 	@Override
 	public void display() {
-		System.out.println("Watch out for cooler!");
+		System.out.println(this.message);
 	}
 
 	@Override
@@ -25,6 +26,15 @@ public class DisplayForecast implements Observer, DisplayElement {
 		this.humidity = humidity;
 
 		// 数据处理
+
+		if (humidity >= 70) {
+			this.message = "Rainy weather!";
+		} else if (temperature > 80) {
+			this.message = "Watch out for cooler!";
+		} else {
+			this.message = "More fo the same!";
+		}
+
 		display();
 	}
 }
