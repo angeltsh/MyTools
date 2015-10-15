@@ -5,10 +5,10 @@ package demo.DesignPattern.Observer.demo1;
  */
 public class DisplayForecast implements Observer, DisplayElement {
 
-	public float temperature;
-	public float humidity;
-	public Subject weatherData;
-	public String message;
+	private float temperature;
+	private float humidity;
+	private Subject weatherData;
+	private String message;
 
 	public DisplayForecast(Subject weatherData) {
 		this.weatherData = weatherData;

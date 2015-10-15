@@ -5,9 +5,9 @@ package demo.DesignPattern.Observer.demo1;
  */
 public class DisplayCurrentConditions implements Observer, DisplayElement {
 
-	public float temperature;
-	public float humidity;
-	public Subject weatherData;
+	private float temperature;
+	private float humidity;
+	private Subject weatherData;
 
 	public DisplayCurrentConditions(Subject weatherData) {
 		this.weatherData = weatherData;

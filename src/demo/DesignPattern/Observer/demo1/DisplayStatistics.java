@@ -5,16 +5,16 @@ package demo.DesignPattern.Observer.demo1;
  */
 public class DisplayStatistics implements Observer, DisplayElement {
 
-	public float temperature;
-	public float humidity;
-	public Subject weatherData;
+	private float temperature;
+	private float humidity;
+	private Subject weatherData;
 
-	public Float avg;
-	public Float max;
-	public Float min;
+	private Float avg;
+	private Float max;
+	private Float min;
 
-	public Float sum;// 温度总数
-	public int num;// 数据获取次数
+	private Float sum;// 温度总数
+	private int num;// 数据获取次数
 
 	public DisplayStatistics(Subject weatherData) {
 		this.weatherData = weatherData;
