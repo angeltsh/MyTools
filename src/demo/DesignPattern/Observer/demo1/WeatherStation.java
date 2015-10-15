@@ -10,7 +10,7 @@ public class WeatherStation {
 
 		DisplayCurrentConditions currentConditions = new DisplayCurrentConditions(
 				weatherData);
-		DisplayStatisticsConditions statisticsConditions = new DisplayStatisticsConditions(
+		DisplayStatistics statisticsConditions = new DisplayStatistics(
 				weatherData);
 
 		weatherData.setMeasurements(80, 65, 30.4f);

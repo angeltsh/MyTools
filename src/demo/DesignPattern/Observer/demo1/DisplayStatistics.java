@@ -3,7 +3,7 @@ package demo.DesignPattern.Observer.demo1;
 /**
  * 展示版
  */
-public class DisplayStatisticsConditions implements Observer, DisplayElement {
+public class DisplayStatistics implements Observer, DisplayElement {
 
 	public float temperature;
 	public float humidity;
@@ -16,7 +16,7 @@ public class DisplayStatisticsConditions implements Observer, DisplayElement {
 	public Float sum;// 温度总数
 	public int num;// 数据获取次数
 
-	public DisplayStatisticsConditions(Subject weatherData) {
+	public DisplayStatistics(Subject weatherData) {
 		this.weatherData = weatherData;
 		sum = 0f;
 		weatherData.registerObserver(this);
