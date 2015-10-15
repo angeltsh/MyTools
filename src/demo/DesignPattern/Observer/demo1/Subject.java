@@ -1,4 +1,4 @@
-package demo.DesignPattern.Observer;
+package demo.DesignPattern.Observer.demo1;
 
 /**
  * Ö÷Ìâ
