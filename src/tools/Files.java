@@ -2,7 +2,7 @@ package tools;
 
 import java.io.File;
 
-public class Test {
+public class Files {
 	public static void main(String[] args) {
 
 		String root = "F:/网络部/张浩/10万模型/网络中心（31201-34800）/33601-34200杨闻轶/Test";
