@@ -14,5 +14,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dom4j/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/json/json.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mail/mail.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
