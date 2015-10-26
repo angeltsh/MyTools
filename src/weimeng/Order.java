@@ -1,4 +1,4 @@
-package test;
+package weimeng;
 
 public class Order {
 	private int AId;

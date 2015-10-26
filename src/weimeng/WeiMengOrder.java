@@ -1,4 +1,4 @@
-package test;
+package weimeng;
 
 public class WeiMengOrder {
 	private Code code;
