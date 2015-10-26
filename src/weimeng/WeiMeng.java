@@ -6,6 +6,7 @@ import org.json.JSONObject;
 
 import tools.EmailTool;
 import tools.JSONTool;
+import tools.TimeTool;
 
 import com.google.gson.Gson;
 
@@ -44,11 +45,14 @@ public class WeiMeng {
 		if (orders.getData() == null) {
 			sb.append("最近无订单");
 		} else {
+
+			int page_no = orders.getData().getPage_no();
+
 			while (orders.getData().getPage_count() > orders.getData()
 					.getPage_no()) {
 
 				WeiMengOrder orders2 = wm.getReturnOrderJson(orders.getData()
-						.getPage_size(), (orders.getData().getPage_no() + 1));
+						.getPage_size(), (++page_no));
 
 				if (orders2.getData() == null) {
 					break;
@@ -81,6 +85,11 @@ public class WeiMeng {
 				Order order = p.getOrder();
 				// 订单货物信息
 				List<Goods> goods = p.getGoods();
+
+				// 判断订单时间
+				if (TimeTool.isBefore(order.getPayTime(), startTime)) {
+					continue;
+				}
 
 				int rowspan = goods.size();
 
