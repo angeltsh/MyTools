@@ -25,12 +25,13 @@ public class WeiMeng {
 
 		WeiMeng wm = new WeiMeng();
 
-		ACCESS_TOKEN = "c0b12eec690568eb8b95b45643c0547ebfc82d1306afa39382f87b7b1da466ea3bd23002c4b7eec31cd7e010b7508e64199dff354ae899bf24581c51aa80c3bd";
-		// ACCESS_TOKEN = wm.getAccessToken();// 真实环境测试
+		// ACCESS_TOKEN =
+		// "d49310efda8a6101007783f742c5f7671fa9dae3316ed1e6009fc194d85ae258d537ecfe8119bfe7d174d8b1319e4541767fd0155fa6d48af264346217d91947";
+		ACCESS_TOKEN = wm.getAccessToken();// 真实环境测试
 
 		WeiMengOrder orders = wm.getReturnOrderJson(1, 1);
 
-		StringBuffer html = wm.getHTMLOrder(orders, wm, "2015-10-10 00:00:00");
+		StringBuffer html = wm.getHTMLOrder(orders, wm, "2015-10-01 00:00:00");
 
 		new EmailTool().sendEmail("674725574@qq.com", "微信商城未收货订单信息核对",
 				html.toString());
@@ -111,7 +112,7 @@ public class WeiMeng {
 					sb.append("<td>" + g.getItemName()
 							+ "<br/><img style=\"width:50px;\" src=\""
 							+ g.getImageUrl() + "\" />" + "</td>");
-					sb.append("<td>" + g.getAmount() + "</td>");
+					sb.append("<td>" + g.getPrice() + "</td>");
 					sb.append("<td>" + g.getQty() + "</td>");
 
 					if (i == 1) {
@@ -132,7 +133,6 @@ public class WeiMeng {
 			sb.append("</table>");
 		}
 
-		System.out.println(sb);
 		return sb;
 	}
 
@@ -157,11 +157,9 @@ public class WeiMeng {
 		orderData.put("page_size", page_size);
 		orderData.put("page_no", page_no);
 
-		System.out.println(orderData);
-
 		String jsonStr = JSONTool.getJSONStringByPost(http_orderList
 				+ ACCESS_TOKEN, orderData.toString());
-
+		
 		System.out.println(jsonStr);
 
 		Gson gson = new Gson();
@@ -174,7 +172,7 @@ public class WeiMeng {
 		String access_token = (String) (new JSONObject(jsonStr)
 				.getJSONObject("data").get("access_token"));
 
-		System.out.println(access_token);
+		//System.out.println(access_token);
 		return access_token;
 	}
 }
