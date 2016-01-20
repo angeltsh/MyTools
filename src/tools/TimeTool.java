@@ -1,6 +1,31 @@
 package tools;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class TimeTool {
+
+	/**
+	 * 获取当前时间
+	 * 
+	 * @格式 yyyy-MM-dd HH:mm:ss
+	 */
+	public static String getCurrentTime() {
+		String time = getCurrentTime("yyyy-MM-dd HH:mm:ss");
+		return time;
+	}
+
+	/**
+	 * 根据指定格式获取当前时间
+	 * 
+	 * @param pattern
+	 *            格式，如：yyyy-MM-dd HH:mm:ss
+	 * @return
+	 */
+	public static String getCurrentTime(String pattern) {
+		SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+		return dateFormat.format(new Date());
+	}
 
 	public static boolean isBefore(String time1, String time2) {
 		return !(isBigger(time1, time2));

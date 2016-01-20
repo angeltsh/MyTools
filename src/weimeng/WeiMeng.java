@@ -31,7 +31,7 @@ public class WeiMeng {
 
 		WeiMengOrder orders = wm.getReturnOrderJson(1, 1);
 
-		StringBuffer html = wm.getHTMLOrder(orders, wm, "2015-10-01 00:00:00");
+		StringBuffer html = wm.getHTMLOrder(orders, wm, "2015-12-01 00:00:00");
 
 		new EmailTool().sendEmail("674725574@qq.com", "微信商城未收货订单信息核对",
 				html.toString());
