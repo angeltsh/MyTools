@@ -49,7 +49,10 @@ public class TableToBean {
 	private String packageStr;
 	private boolean isSerializable;
 	private String rooFilePath;
-	private String url = "jdbc:mysql://192.168.1.83:3306/scpt_utf8?characterEncoding=utf8&user=root&password=root";
+	private String url;
+
+	private StringBuffer template;// 模板设置
+	private StringBuffer sqlinsert;// SQL插入语句
 
 	public String getUrl() {
 		return url;
@@ -110,6 +113,10 @@ public class TableToBean {
 	 *            各位按自己的
 	 */
 	public void tableToEntity(String tName) {
+		// 初始化模板数据
+		template = new StringBuffer();
+		sqlinsert = new StringBuffer("INSERT INTO " + tName + "(");
+
 		tablename = tName;
 		// 数据连Connection获取,JDBC
 		Connection conn = getConnection();
@@ -169,6 +176,12 @@ public class TableToBean {
 				e.printStackTrace();
 			}
 		}
+
+		System.out.println("=========设置属性模板===========");
+		System.out.println(template);
+		System.out.println("=========插入语句模板===========");
+		System.out.println(sqlinsert);
+
 	}
 
 	/**
@@ -269,15 +282,36 @@ public class TableToBean {
 	 * @return
 	 */
 	private void processAllAttrs(StringBuffer sb) {
+		int _num = 0;
 		if (isSerializable) {
 			sb.append("\tprivate static final long serialVersionUID = 1L;\r\n");
 		}
 		for (int i = 0; i < colnames.length; i++) {
-			sb.append("\tprivate "
-					+ oracleSqlType2JavaType(colTypes[i], colScale[i],
-							colSizes[i]) + " " + lowerCap(colnames[i])
+			String type = oracleSqlType2JavaType(colTypes[i], colScale[i],
+					colSizes[i]);
+
+			sb.append("\tprivate " + type + " " + lowerCap(colnames[i])
 					+ ";\r\n");
+
+			template.append("data.set" + colnames[i] + "(rs.get"
+					+ ("Integer".equals(type) ? "Int" : type) + "(\""
+					+ colnames[i] + "\"));\n");
+
+			if (i > 0) {
+				sqlinsert.append(",");
+			}
+
+			sqlinsert.append(colnames[i]);
+
+			_num++;
 		}
+
+		sqlinsert.append(") VALUES(");
+		for (int i = 0; i < _num - 1; i++) {
+			sqlinsert.append("?,");
+		}
+		sqlinsert.append("?)");
+
 		sb.append("\r\n");
 	}
 
