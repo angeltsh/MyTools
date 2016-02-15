@@ -32,7 +32,7 @@ public class TableToBean {
 		t.setUrl("jdbc:mysql://192.168.1.83:3306/xueshengchuangzao?characterEncoding=utf8&user=root&password=root");
 		// t.tableToEntity("race_class");
 		// t.tableToEntity("race_sign_user");
-		t.tableToEntity("race_product");
+		t.tableToEntity("cloud_user");
 		// t.databaseToEntity("scpt_utf8");
 
 	}
