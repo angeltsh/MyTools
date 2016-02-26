@@ -29,10 +29,19 @@ public class TableToBean {
 	public static void main(String[] args) {
 		TableToBean t = new TableToBean("com.xscz.entity", false,
 				"C:/Users/Admin/Desktop/entity");
-		t.setUrl("jdbc:mysql://192.168.1.83:3306/xueshengchuangzao?characterEncoding=utf8&user=root&password=root");
+
+		String ip = "192.168.1.83";
+		String port = "3306";
+		String database = "xueshengchuangzao";
+		String user = "root";
+		String password = "root";
+
+		t.setUrl("jdbc:mysql://" + ip + ":" + port + "/" + database
+				+ "?characterEncoding=utf8&user=" + user + "&password="
+				+ password);
 		// t.tableToEntity("race_class");
 		// t.tableToEntity("race_sign_user");
-		t.tableToEntity("cloud_user");
+		t.tableToEntity("cloud_file");
 		// t.databaseToEntity("scpt_utf8");
 
 	}
