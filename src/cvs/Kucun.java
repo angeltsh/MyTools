@@ -82,7 +82,7 @@ public class Kucun {
 		String csvFileName = "csv.csv";
 		String resultName = "update.sql";
 
-		CVSTool test = new CVSTool(rootPath + csvFileName);
+		CSVTool test = new CSVTool(rootPath + csvFileName);
 		List<List<String>> cvsList = test.readCSVFile();
 
 		StringBuffer sql = consoleData(cvsList);

@@ -9,12 +9,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CVSTool {
+public class CSVTool {
 
 	private InputStreamReader fr = null;
 	private BufferedReader br = null;
 
-	public CVSTool(String f) throws IOException {
+	public CSVTool(String f) throws IOException {
 		fr = new InputStreamReader(new FileInputStream(f), "GBK");
 	}
 
@@ -76,7 +76,7 @@ public class CVSTool {
 
 	// 测试方法
 	public static void main(String[] args) throws IOException {
-		CVSTool test = new CVSTool("C:/Users/Administrator/Desktop/test.csv");
+		CSVTool test = new CSVTool("C:/Users/Administrator/Desktop/test.csv");
 		List<List<String>> cvsList = test.readCSVFile();
 
 		int start = 0;
