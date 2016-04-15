@@ -9,12 +9,12 @@ import java.io.ObjectOutputStream;
 
 public class BPFactory {
 	/**
-	 * BPÉñ¾­ÍøÂçÔª
+	 * BPç¥ç»ç½‘ç»œå…ƒ
 	 */
 	private static BP bp;
 	
 	/**
-	 * ³õÊ¼»¯Ò»¸öÈ«ĞÂµÄbpÉñ¾­ÍøÂç
+	 * åˆå§‹åŒ–ä¸€ä¸ªå…¨æ–°çš„bpç¥ç»ç½‘ç»œ
 	 * @param inputSize
 	 * @param hiddenSize 
 	 * @param outputSize
@@ -24,7 +24,7 @@ public class BPFactory {
 	}
 	
 	/**
-	 * ´ÓÎÄ¼şÊı¾İÖĞ¶ÁÈ¡bpÉñ¾­ÍøÂç
+	 * ä»æ–‡ä»¶æ•°æ®ä¸­è¯»å–bpç¥ç»ç½‘ç»œ
 	 * @param file
 	 * @throws IOException
 	 * @throws ClassNotFoundException
@@ -37,7 +37,7 @@ public class BPFactory {
 	}
 	
 	/**
-	 * ½«Ä¿Ç°µÄÉñ¾­ÍøÂç´¢´æÔÚÖ¸¶¨ÎÄ¼ş
+	 * å°†ç›®å‰çš„ç¥ç»ç½‘ç»œå‚¨å­˜åœ¨æŒ‡å®šæ–‡ä»¶
 	 * @param file
 	 * @throws IOException
 	 */
@@ -49,7 +49,7 @@ public class BPFactory {
 	}
 	
 	/**
-	 * ÑµÁ·BPÉñ¾­ÍøÂç
+	 * è®­ç»ƒBPç¥ç»ç½‘ç»œ
 	 * @param trainData
 	 * @param target
 	 */
@@ -58,7 +58,7 @@ public class BPFactory {
 	}
 	
 	/**
-	 * ÒªÇóbpÉñ¾­ÍøÂç·µ»ØÔ¤²âÖµ
+	 * è¦æ±‚bpç¥ç»ç½‘ç»œè¿”å›é¢„æµ‹å€¼
 	 * @param inData
 	 * @return
 	 */

@@ -5,7 +5,7 @@ import java.util.Vector;
 public class TimePointWord {
 	
 	/**
-	 * ÓÃÓÚ´¢´æ×ø±êµã
+	 * ç”¨äºå‚¨å­˜åæ ‡ç‚¹
 	 */
 	private Vector<TimePointData> points;
 	
@@ -14,7 +14,7 @@ public class TimePointWord {
 	}
 	
 	/**
-	 * Ïò²É¼¯¿âÖĞÌí¼ÓÒ»¸öµ¥¶ÀµÄ×ø±êµã
+	 * å‘é‡‡é›†åº“ä¸­æ·»åŠ ä¸€ä¸ªå•ç‹¬çš„åæ ‡ç‚¹
 	 * @param x
 	 * @param y
 	 * @param z

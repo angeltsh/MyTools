@@ -8,7 +8,7 @@ import ghost.writer.logic.WordDataMap;
 public class Util {
 	
 	/**
-	 * Í¨¹ı´«ÈëµØÍ¼Êı¾İºÍÖ¸¶¨×Ö·û´®½øĞĞÑµÁ·
+	 * é€šè¿‡ä¼ å…¥åœ°å›¾æ•°æ®å’ŒæŒ‡å®šå­—ç¬¦ä¸²è¿›è¡Œè®­ç»ƒ
 	 * @param map
 	 * @param data
 	 */
@@ -33,7 +33,7 @@ public class Util {
 	}
 	
 	/**
-	 * ·µ»ØÇ°Îå¸öÆ¥Åä¶È×î¸ßµÄ×Ö·û´® ´ËËã·¨ĞèÒª¸Ä½ø
+	 * è¿”å›å‰äº”ä¸ªåŒ¹é…åº¦æœ€é«˜çš„å­—ç¬¦ä¸² æ­¤ç®—æ³•éœ€è¦æ”¹è¿›
 	 * @param map
 	 * @return
 	 */
@@ -55,7 +55,7 @@ public class Util {
 				str1 += 0;
 			}
 		}
-		String result[]=new String[]{"ÎÒ²»ÖªµÀ!","ÎÒ²»ÖªµÀ!","ÎÒ²»ÖªµÀ!","ÎÒ²»ÖªµÀ!","ÎÒ²»ÖªµÀ!"};
+		String result[]=new String[]{"æˆ‘ä¸çŸ¥é“!","æˆ‘ä¸çŸ¥é“!","æˆ‘ä¸çŸ¥é“!","æˆ‘ä¸çŸ¥é“!","æˆ‘ä¸çŸ¥é“!"};
 		double rank[]=new double[5];
 		for(int i=0;i<WordDataFactory.getSize();++i) {
 			String str2=WordDataFactory.StringToBinary(WordDataFactory.getData(i));

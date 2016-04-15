@@ -31,37 +31,37 @@ public class MyJFrame extends JFrame implements WindowListener {
 	private JButton jbu_tell, jbu_learn, jbu_clean, jbu_other;
 
 	/**
-	 * ´°¿Ú¾ä±ú
+	 * çª—å£å¥æŸ„
 	 */
 	public static JFrame context;
 
 	/**
-	 * Êı¾İÎÄ¼şÃû³Æ
+	 * æ•°æ®æ–‡ä»¶åç§°
 	 */
 	private final String BPFileName = "DPData.ser";
 	private final String WordFileName = "WordData.ser";
 
 	public MyJFrame() {
-		super("ÊÖĞ´Ê¶±ğ");
+		super("æ‰‹å†™è¯†åˆ«");
 
 		context = this;
 		this.setLocation(200, 100);
 		/**
-		 * ´¥Ãş°å½çÃæ
+		 * è§¦æ‘¸æ¿ç•Œé¢
 		 */
 		panel = new MyJPanel();
 		this.add(panel);
 		/**
-		 * ÓÒ²à¹¦ÄÜÀ¸½çÃæ
+		 * å³ä¾§åŠŸèƒ½æ ç•Œé¢
 		 */
 		JPanel func_panel = new JPanel();
-		jbu_tell = new JButton("Ê¶±ğ");
+		jbu_tell = new JButton("è¯†åˆ«");
 		jbu_tell.setEnabled(false);
-		jbu_learn = new JButton("Ñ§Ï°");
+		jbu_learn = new JButton("å­¦ä¹ ");
 		jbu_learn.setEnabled(false);
-		jbu_clean = new JButton("ÇåÆÁ");
+		jbu_clean = new JButton("æ¸…å±");
 		jbu_clean.setEnabled(false);
-		jbu_other = new JButton("ÆäËû");
+		jbu_other = new JButton("å…¶ä»–");
 		jbu_other.setEnabled(false);
 		func_panel.setLayout(new GridLayout(8, 1));
 		addButtonHelper(func_panel, jbu_tell);
@@ -149,8 +149,8 @@ public class MyJFrame extends JFrame implements WindowListener {
 				jbu_learn.setEnabled(true);
 				jbu_clean.setEnabled(true);
 				jbu_other.setEnabled(true);
-				JOptionPane.showMessageDialog(context, "BPÉñ¾­ÍøÂç³õÊ¼»¯Íê³É,ºÄÊ±:"
-						+ (System.currentTimeMillis() - oldTime) + "ºÁÃë", "ÌáÊ¾",
+				JOptionPane.showMessageDialog(context, "BPç¥ç»ç½‘ç»œåˆå§‹åŒ–å®Œæˆ,è€—æ—¶:"
+						+ (System.currentTimeMillis() - oldTime) + "æ¯«ç§’", "æç¤º",
 						JOptionPane.NO_OPTION);
 			}
 
@@ -158,7 +158,7 @@ public class MyJFrame extends JFrame implements WindowListener {
 	}
 
 	/**
-	 * Ìí¼Ó°´Å¥¸¨Öúº¯Êı
+	 * æ·»åŠ æŒ‰é’®è¾…åŠ©å‡½æ•°
 	 * 
 	 * @param base
 	 * @param button
@@ -215,7 +215,7 @@ public class MyJFrame extends JFrame implements WindowListener {
 			}
 
 		}).start();
-		JOptionPane.showMessageDialog(context, "ÇëµÈ´ıBPÉñ¾­ÍøÂçÍê³ÉÊı¾İ±£´æ...", "ÌáÊ¾",
+		JOptionPane.showMessageDialog(context, "è¯·ç­‰å¾…BPç¥ç»ç½‘ç»œå®Œæˆæ•°æ®ä¿å­˜...", "æç¤º",
 				JOptionPane.NO_OPTION);
 	}
 

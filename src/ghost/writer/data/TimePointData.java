@@ -3,17 +3,17 @@ package ghost.writer.data;
 public class TimePointData {
 	
 	/**
-	 * ·Ö±ğÓÃÓÚ¼ÇÂ¼µãµÄx£¬y×ø±êÒÔ¼°zÖáµÄÑ¹Á¦Öµ
+	 * åˆ†åˆ«ç”¨äºè®°å½•ç‚¹çš„xï¼Œyåæ ‡ä»¥åŠzè½´çš„å‹åŠ›å€¼
 	 */
 	public int x,y,z;
 	
 	/**
-	 * ÓÃÓÚ¼ÇÂ¼x,y,zÉÏµÄËÙ¶È·ÖÁ¿
+	 * ç”¨äºè®°å½•x,y,zä¸Šçš„é€Ÿåº¦åˆ†é‡
 	 */
 	public double vx,vy,vz;
 	
 	/**
-	 * µãµÄĞòºÅ
+	 * ç‚¹çš„åºå·
 	 */
 	public long index;
 	

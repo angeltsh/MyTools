@@ -12,14 +12,14 @@ public class WordDataFactory {
 	private static WordDataMap data;
 
 	/**
-	 * ÎŞ²ÎÊı³õÊ¼»¯
+	 * æ— å‚æ•°åˆå§‹åŒ–
 	 */
 	public static void initialization() {
 		data = new WordDataMap();
 	}
 
 	/**
-	 * ´Ó´¢´æºÃµÄÊı¾İÖĞ³õÊ¼»¯
+	 * ä»å‚¨å­˜å¥½çš„æ•°æ®ä¸­åˆå§‹åŒ–
 	 * 
 	 * @param file
 	 * @throws IOException
@@ -34,7 +34,7 @@ public class WordDataFactory {
 	}
 
 	/**
-	 * ½«Ä¿Ç°µÄÊı¾İ×Öµä´¢´æµ½ÎÄ¼şÖĞ
+	 * å°†ç›®å‰çš„æ•°æ®å­—å…¸å‚¨å­˜åˆ°æ–‡ä»¶ä¸­
 	 * 
 	 * @param file
 	 * @throws IOException
@@ -47,7 +47,7 @@ public class WordDataFactory {
 	}
 
 	/**
-	 * ÏòÊı¾İ×ÖµäÖĞÌí¼ÓÊı¾İ
+	 * å‘æ•°æ®å­—å…¸ä¸­æ·»åŠ æ•°æ®
 	 * 
 	 * @param str
 	 */
@@ -56,7 +56,7 @@ public class WordDataFactory {
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öÖ¸¶¨Î»ÖÃµÄ×Ö·û´®
+	 * è¿”å›ä¸€ä¸ªæŒ‡å®šä½ç½®çš„å­—ç¬¦ä¸²
 	 * 
 	 * @param index
 	 * @return
@@ -66,7 +66,7 @@ public class WordDataFactory {
 	}
 
 	/**
-	 * ×Ö·û´®×ª»»³ÉÄÜ¹»Æ¥ÅäµÄ¶ş½øÖÆ ³¤¶ÈÎªMAX_LENTH*16
+	 * å­—ç¬¦ä¸²è½¬æ¢æˆèƒ½å¤ŸåŒ¹é…çš„äºŒè¿›åˆ¶ é•¿åº¦ä¸ºMAX_LENTH*16
 	 * 
 	 * @param data
 	 * @return
@@ -88,7 +88,7 @@ public class WordDataFactory {
 	}
 
 	/**
-	 * ·µ»ØÁ½¸ö×Ö·û´®µÄÆ¥Åä¶È ´ËÆ¥ÅäËã·¨ÓĞ´ı¸Ä½ø
+	 * è¿”å›ä¸¤ä¸ªå­—ç¬¦ä¸²çš„åŒ¹é…åº¦ æ­¤åŒ¹é…ç®—æ³•æœ‰å¾…æ”¹è¿›
 	 * 
 	 * @param str1
 	 * @param str2
@@ -106,7 +106,7 @@ public class WordDataFactory {
 	}
 
 	/**
-	 * ¼ì²éÈİÆ÷ÄÚÊÇ·ñÓĞÖ¸¶¨×Ö·û´®£¬Èç¹ûÓĞÔò·µ»Øtrue·ñÔò·µ»Øfalse
+	 * æ£€æŸ¥å®¹å™¨å†…æ˜¯å¦æœ‰æŒ‡å®šå­—ç¬¦ä¸²ï¼Œå¦‚æœæœ‰åˆ™è¿”å›trueå¦åˆ™è¿”å›false
 	 * 
 	 * @param str
 	 * @return
@@ -116,7 +116,7 @@ public class WordDataFactory {
 	}
 
 	/**
-	 * ·µ»Øµ±Ç°Êı¾İ´ÊµäµÄ´óĞ¡
+	 * è¿”å›å½“å‰æ•°æ®è¯å…¸çš„å¤§å°
 	 * 
 	 * @return
 	 */

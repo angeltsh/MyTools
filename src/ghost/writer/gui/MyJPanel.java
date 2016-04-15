@@ -19,17 +19,17 @@ public class MyJPanel extends JPanel implements MouseMotionListener {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * ±£´æ»æÖÆµÄÎÄ×ÖÊı¾İ×ø±ê
+	 * ä¿å­˜ç»˜åˆ¶çš„æ–‡å­—æ•°æ®åæ ‡
 	 */
 	private WordMap word;
 
 	/**
-	 * ÓÃÓÚ»æÖÆµÄµØÍ¼»º´æ
+	 * ç”¨äºç»˜åˆ¶çš„åœ°å›¾ç¼“å­˜
 	 */
 	private int[][] work_map;
 
 	/**
-	 * »æÖÆÃæ°åµÄ³¤ºÍ¿í
+	 * ç»˜åˆ¶é¢æ¿çš„é•¿å’Œå®½
 	 */
 	private final int width = 400;
 	private final int height = 400;
@@ -42,7 +42,7 @@ public class MyJPanel extends JPanel implements MouseMotionListener {
 	}
 	
 	/**
-	 * Çå³ıÆÁÄ»
+	 * æ¸…é™¤å±å¹•
 	 */
 	void clearScreen() {
 		word.resetMap();
@@ -50,7 +50,7 @@ public class MyJPanel extends JPanel implements MouseMotionListener {
 	}
 	
 	/**
-	 * ·ÖÎö¸¨Öúº¯Êı
+	 * åˆ†æè¾…åŠ©å‡½æ•°
 	 */
 	void analysis() {
 		int temp_width = word.getWordWidth();
@@ -64,7 +64,7 @@ public class MyJPanel extends JPanel implements MouseMotionListener {
 	}
 	
 	/**
-	 * ·µ»ØµØÍ¼¸ñÊ½»¯Ö®ºóµÄÊı¾İ
+	 * è¿”å›åœ°å›¾æ ¼å¼åŒ–ä¹‹åçš„æ•°æ®
 	 * @return
 	 */
 	int[][] getMap() {
@@ -75,15 +75,15 @@ public class MyJPanel extends JPanel implements MouseMotionListener {
 
 	public void paint(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.setColor(Color.WHITE);// Ê¹ÓÃ´óĞ´·½±ã¿çÆ½Ì¨
+		g2d.setColor(Color.WHITE);// ä½¿ç”¨å¤§å†™æ–¹ä¾¿è·¨å¹³å°
 		g2d.fillRect(0, 0, width, height);
-		g2d.setColor(Color.CYAN);// Ê¹ÓÃ´óĞ´·½±ã¿çÆ½Ì¨
+		g2d.setColor(Color.CYAN);// ä½¿ç”¨å¤§å†™æ–¹ä¾¿è·¨å¹³å°
 		g2d.drawLine(width / 2, 0, width / 2, height);
 		g2d.drawLine(0, height / 2, width, height / 2);
 		g2d.drawRect((width - WordMap.unit_width) / 2,
 				(height - WordMap.unit_height) / 2, WordMap.unit_width,
 				WordMap.unit_height);
-		g2d.setColor(Color.BLACK);// Ê¹ÓÃ´óĞ´·½±ã¿çÆ½Ì¨
+		g2d.setColor(Color.BLACK);// ä½¿ç”¨å¤§å†™æ–¹ä¾¿è·¨å¹³å°
 		work_map = word.getMap();
 		for (int i = 0; i < width; ++i) {
 			for (int j = 0; j < height; ++j) {
@@ -97,7 +97,7 @@ public class MyJPanel extends JPanel implements MouseMotionListener {
 	@Override
 	public void mouseDragged(MouseEvent e) {
 		/**
-		 * »æÖÆµÄÊ±ºòÎªÁËÔö¼ÓÎÄ×ÖĞÅÏ¢Á¿ËùÒÔ»æÖÆ¶à¸öµã
+		 * ç»˜åˆ¶çš„æ—¶å€™ä¸ºäº†å¢åŠ æ–‡å­—ä¿¡æ¯é‡æ‰€ä»¥ç»˜åˆ¶å¤šä¸ªç‚¹
 		 */
 		word.setPoint(e.getX() - 3, e.getY());
 		word.setPoint(e.getX() + 3, e.getY());

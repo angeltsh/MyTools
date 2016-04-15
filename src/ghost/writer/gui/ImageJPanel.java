@@ -17,11 +17,11 @@ class ImageJPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * ÏÔÊ¾µÄµØÍ¼Êı¾İ
+	 * æ˜¾ç¤ºçš„åœ°å›¾æ•°æ®
 	 */
 	private final int[][] map;
 	/**
-	 * ÉèÖÃÍ¼Æ¬ÏÔÊ¾Ãæ°åµÄ´óĞ¡
+	 * è®¾ç½®å›¾ç‰‡æ˜¾ç¤ºé¢æ¿çš„å¤§å°
 	 */
 	private final int width = WordMap.unit_width*4, height = WordMap.unit_height*4;
 
@@ -33,16 +33,16 @@ class ImageJPanel extends JPanel {
 
 	public void paint(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.setColor(Color.WHITE);// Ê¹ÓÃ´óĞ´±ãÓÚ¿çÆ½Ì¨
+		g2d.setColor(Color.WHITE);// ä½¿ç”¨å¤§å†™ä¾¿äºè·¨å¹³å°
 		g2d.fillRect(0, 0, width, height);
-		g2d.setColor(Color.RED);// Ê¹ÓÃ´óĞ´±ãÓÚ¿çÆ½Ì¨
+		g2d.setColor(Color.RED);// ä½¿ç”¨å¤§å†™ä¾¿äºè·¨å¹³å°
 		for(int i=0;i<width;i+=8) {
 			g2d.drawLine(i, 0, i, height);
 		}
 		for(int i=0;i<height;i+=8) {
 			g2d.drawLine(0, i, width, i);
 		}
-		g2d.setColor(Color.BLACK);// Ê¹ÓÃ´óĞ´±ãÓÚ¿çÆ½Ì¨
+		g2d.setColor(Color.BLACK);// ä½¿ç”¨å¤§å†™ä¾¿äºè·¨å¹³å°
 		for (int i = 0; i < WordMap.unit_width; ++i) {
 			for (int j = 0; j < WordMap.unit_height; ++j) {
 				if (map[i][j] == 1)

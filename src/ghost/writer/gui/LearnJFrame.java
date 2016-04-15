@@ -27,7 +27,7 @@ public class LearnJFrame extends JFrame {
 	private JFrame context;
 
 	LearnJFrame(JFrame father,int map[][]) {
-		super("Ñ§Ï°Ãæ°å");
+		super("å­¦ä¹ é¢æ¿");
 		context=this;
 		this.setLocation(father.getLocation().x + 20,
 				father.getLocation().y + 80);
@@ -38,13 +38,13 @@ public class LearnJFrame extends JFrame {
 		JPanel temp_panel=new JPanel();
 		this.add(temp_panel);
 		temp_panel.setLayout(new GridLayout(2,1));
-		jtf_value=new JTextField("ÕâÊÇÊ²Ã´?",10);
+		jtf_value=new JTextField("è¿™æ˜¯ä»€ä¹ˆ?",10);
 		addComponentHelper(temp_panel,jtf_value);
 		JPanel button_panel=new JPanel();
 		button_panel.setLayout(new GridLayout(1,2));
 		temp_panel.add(button_panel);
-		jbu_confirm=new JButton("È·¶¨");
-		jbu_cancel=new JButton("È¡Ïû");
+		jbu_confirm=new JButton("ç¡®å®š");
+		jbu_cancel=new JButton("å–æ¶ˆ");
 		jbu_confirm.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -67,7 +67,7 @@ public class LearnJFrame extends JFrame {
 	}
 	
 	/**
-	 * Ìí¼Ó°´Å¥¸¨Öúº¯Êı
+	 * æ·»åŠ æŒ‰é’®è¾…åŠ©å‡½æ•°
 	 * @param base
 	 * @param button
 	 */

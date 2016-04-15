@@ -1,7 +1,7 @@
 package ghost.writer.data;
 
 /**
- * ÓÃÓÚ´¢´æÎÄ×ÖĞÅÏ¢
+ * ç”¨äºå‚¨å­˜æ–‡å­—ä¿¡æ¯
  * 
  * @author MyGhost
  * 
@@ -9,32 +9,32 @@ package ghost.writer.data;
 public class WordMap {
 
 	/**
-	 * ÎÄ×ÖµØÍ¼ĞÅÏ¢
+	 * æ–‡å­—åœ°å›¾ä¿¡æ¯
 	 */
 	private int data[][];
 
 	/**
-	 * ²Ã¼ôºóµÄÎÄ×ÖµØÍ¼ĞÅÏ¢
+	 * è£å‰ªåçš„æ–‡å­—åœ°å›¾ä¿¡æ¯
 	 */
 	private int scan_data[][];
 
 	/**
-	 * ¸ñÊ½»¯Ö®ºóµÄÎÄ×ÖµØÍ¼ĞÅÏ¢
+	 * æ ¼å¼åŒ–ä¹‹åçš„æ–‡å­—åœ°å›¾ä¿¡æ¯
 	 */
 	private int format_data[][];
 
 	/**
-	 * ÎÄ×ÖÎ»ÖÃĞÅÏ¢
+	 * æ–‡å­—ä½ç½®ä¿¡æ¯
 	 */
 	private int start_w, end_w, start_h, end_h, word_w, word_h;
 
 	/**
-	 * ±ê×¼µØÍ¼¿éµÄ´óĞ¡
+	 * æ ‡å‡†åœ°å›¾å—çš„å¤§å°
 	 */
 	public static final int unit_width = 50, unit_height = 50;
 
 	/**
-	 * µØÍ¼´óĞ¡
+	 * åœ°å›¾å¤§å°
 	 */
 	private final int width, height;
 
@@ -46,16 +46,16 @@ public class WordMap {
 	}
 
 	/**
-	 * ÓÃÓÚ»ñÈ¡ÎÄ×ÖµØÍ¼ĞÅÏ¢
+	 * ç”¨äºè·å–æ–‡å­—åœ°å›¾ä¿¡æ¯
 	 * 
-	 * @return ÎÄ×ÖµØÍ¼ĞÅÏ¢
+	 * @return æ–‡å­—åœ°å›¾ä¿¡æ¯
 	 */
 	public int[][] getMap() {
 		return data;
 	}
 
 	/**
-	 * ÄÚ²¿¸¨Öúº¯Êı£¬ÓÃÓÚ¸¨Öú¼ì²âµ±Ç°ÇøÓòÄÚÊÇ·ñ´æÔÚµãºÛ¼£
+	 * å†…éƒ¨è¾…åŠ©å‡½æ•°ï¼Œç”¨äºè¾…åŠ©æ£€æµ‹å½“å‰åŒºåŸŸå†…æ˜¯å¦å­˜åœ¨ç‚¹ç—•è¿¹
 	 * 
 	 * @param start_x
 	 * @param start_y
@@ -74,7 +74,7 @@ public class WordMap {
 	}
 
 	/**
-	 * ½«¸ñÊ½»¯ºóµÄµØÍ¼Êı¾İ¸´ÖÆµ½Õ¹Ê¾Ãæ°å
+	 * å°†æ ¼å¼åŒ–åçš„åœ°å›¾æ•°æ®å¤åˆ¶åˆ°å±•ç¤ºé¢æ¿
 	 */
 	public int[][] copyMap() {
 		data = new int[width][height];
@@ -90,16 +90,16 @@ public class WordMap {
 	}
 
 	/**
-	 * Çå¿ÕÖØÖÃµ±Ç°µØÍ¼¿é
+	 * æ¸…ç©ºé‡ç½®å½“å‰åœ°å›¾å—
 	 */
 	public void resetMap() {
 		data = new int[width][height];
-		scan_data=null;
-		format_data=new int[unit_width][unit_height];
+		scan_data = null;
+		format_data = new int[unit_width][unit_height];
 	}
 
 	/**
-	 * ÉèÖÃµØÍ¼ÉÏµÄµãÎ»
+	 * è®¾ç½®åœ°å›¾ä¸Šçš„ç‚¹ä½
 	 * 
 	 * @param x
 	 * @param y
@@ -116,9 +116,9 @@ public class WordMap {
 	}
 
 	/**
-	 * ±ØĞëÖÍºóÓÚ·ÖÎöº¯Êıºóµ÷ÓÃ
+	 * å¿…é¡»æ»åäºåˆ†æå‡½æ•°åè°ƒç”¨
 	 * 
-	 * @return ¼ì²â³öÀ´µÄ×ÖµÄ¿ò¼Ü
+	 * @return æ£€æµ‹å‡ºæ¥çš„å­—çš„æ¡†æ¶
 	 */
 	public int[][] getWordMap() {
 		scan_data = new int[word_w][word_h];
@@ -131,9 +131,9 @@ public class WordMap {
 	}
 
 	/**
-	 * Í¨¹ı·ÖÎö²Ã¼õ¹ıµÃÎÄ×ÖµØÍ¼½øĞĞ¸ñÊ½»¯²¢·µ»Ø¸ñÊ½»¯Ö®ºóµÄ½á¹û
+	 * é€šè¿‡åˆ†æè£å‡è¿‡å¾—æ–‡å­—åœ°å›¾è¿›è¡Œæ ¼å¼åŒ–å¹¶è¿”å›æ ¼å¼åŒ–ä¹‹åçš„ç»“æœ
 	 * 
-	 * @return ¸ñÊ½»¯Ö®ºóµÄµØÍ¼ĞÅÏ¢
+	 * @return æ ¼å¼åŒ–ä¹‹åçš„åœ°å›¾ä¿¡æ¯
 	 */
 	public int[][] getFormateMap() {
 		float scale_w, scale_h;
@@ -151,9 +151,9 @@ public class WordMap {
 	}
 
 	/**
-	 * Í¨¹ıÖğ¸öÏñËØ·ÖÎö»ñµÃµ±Ç°ÎÄ×ÖµÄ¿í¶È
+	 * é€šè¿‡é€ä¸ªåƒç´ åˆ†æè·å¾—å½“å‰æ–‡å­—çš„å®½åº¦
 	 * 
-	 * @return µ±Ç°ÎÄ×ÖµÄ¿í¶È
+	 * @return å½“å‰æ–‡å­—çš„å®½åº¦
 	 */
 	public int getWordWidth() {
 		start_w = 0;
@@ -189,9 +189,9 @@ public class WordMap {
 	}
 
 	/**
-	 * Í¨¹ıÖğ¸öÏñËØ·ÖÎö»ñµÃµ±Ç°ÎÄ×ÖµÄ¸ß¶È
+	 * é€šè¿‡é€ä¸ªåƒç´ åˆ†æè·å¾—å½“å‰æ–‡å­—çš„é«˜åº¦
 	 * 
-	 * @return µ±Ç°ÎÄ×ÖµÄ¸ß¶È
+	 * @return å½“å‰æ–‡å­—çš„é«˜åº¦
 	 */
 	public int getWordHeight() {
 		start_h = 0;

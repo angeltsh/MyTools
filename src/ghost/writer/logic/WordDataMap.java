@@ -13,7 +13,7 @@ public class WordDataMap implements Serializable {
 	private ArrayList<String> data;
 
 	/**
-	 * ÄÜ¹»½ÓÊÜµÄ×î³¤µÄ×Ö·û´®
+	 * èƒ½å¤ŸæŽ¥å—çš„æœ€é•¿çš„å­—ç¬¦ä¸²
 	 */
 	public static final int MAX_LENTH = 10;
 
@@ -22,21 +22,21 @@ public class WordDataMap implements Serializable {
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öÖ¸¶¨Î»ÖÃµÄ×Ö·û´®
+	 * è¿”å›žä¸€ä¸ªæŒ‡å®šä½ç½®çš„å­—ç¬¦ä¸²
 	 * 
 	 * @param index
 	 * @return
 	 */
 	public String getData(int index) {
 		if (index >= data.size() || index < 0) {
-			return "ÄáÂê£¡ÂÒÀ´";
+			return "å°¼çŽ›ï¼ä¹±æ¥";
 		} else {
 			return data.get(index);
 		}
 	}
 
 	/**
-	 * ¼ì²éÈÝÆ÷ÄÚÊÇ·ñÓÐÖ¸¶¨×Ö·û´®£¬Èç¹ûÓÐÔò·µ»Øtrue·ñÔò·µ»Øfalse
+	 * æ£€æŸ¥å®¹å™¨å†…æ˜¯å¦æœ‰æŒ‡å®šå­—ç¬¦ä¸²ï¼Œå¦‚æžœæœ‰åˆ™è¿”å›žtrueå¦åˆ™è¿”å›žfalse
 	 * 
 	 * @param str
 	 * @return
@@ -51,7 +51,7 @@ public class WordDataMap implements Serializable {
 	}
 
 	/**
-	 * ·µ»Øµ±Ç°Êý¾Ý´ÊµäµÄ´óÐ¡
+	 * è¿”å›žå½“å‰æ•°æ®è¯å…¸çš„å¤§å°
 	 * 
 	 * @return
 	 */
@@ -60,7 +60,7 @@ public class WordDataMap implements Serializable {
 	}
 
 	/**
-	 * Ïò×Ö·ûÊý¾Ý´ÊµäÖÐÌí¼ÓÒ»¸ö×Ö·û´® Èç¹û³¤¶È´óÓÚMAX_LENTHÔò»á×Ô¶¯²Ã¼ô
+	 * å‘å­—ç¬¦æ•°æ®è¯å…¸ä¸­æ·»åŠ ä¸€ä¸ªå­—ç¬¦ä¸² å¦‚æžœé•¿åº¦å¤§äºŽMAX_LENTHåˆ™ä¼šè‡ªåŠ¨è£å‰ª
 	 * 
 	 * @param str
 	 */
